@@ -8,7 +8,8 @@
     <meta name="description" content="Abel Brhane - Ranked #1 Scholar, Computational Mathematician, and Cybersecurity Specialist.">
     <meta property="og:title" content="Abel Brhane | Technical Portfolio">
     <meta property="og:description" content="Explore the technical projects and academic achievements of Abel Brhane.">
-    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -24,16 +25,16 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
 
-        /* --- NAVIGATION --- */
+        /* --- FLEXIBLE NAVIGATION --- */
         nav {
             position: fixed; top: 0; width: 100%; padding: 20px 10%;
             display: flex; justify-content: space-between; align-items: center;
-            background: rgba(5, 5, 5, 0.8); backdrop-filter: blur(10px);
+            background: rgba(5, 5, 5, 0.85); backdrop-filter: blur(10px);
             z-index: 1000; border-bottom: 1px solid #222;
         }
         .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); letter-spacing: -1px; }
         nav ul { display: flex; list-style: none; gap: 30px; }
-        nav ul li a { text-decoration: none; color: var(--text-dim); font-size: 0.9rem; transition: 0.3s; }
+        nav ul li a { text-decoration: none; color: var(--text-dim); font-size: 0.9rem; transition: 0.3s; white-space: nowrap; }
         nav ul li a:hover { color: var(--primary); }
 
         /* --- HERO --- */
@@ -71,30 +72,15 @@
 
         footer { padding: 50px 10%; text-align: center; border-top: 1px solid #222; color: var(--text-dim); font-size: 0.85rem; }
 
-@media (max-width: 600px) {
-    /* Stack logo and menu if the screen is too narrow */
-    nav { 
-        padding: 10px 3%; 
-        flex-direction: column; 
-        gap: 8px; 
-    }
-    .logo { 
-        font-size: 1.1rem; 
-    }
-    /* Reduce gaps and font so 4 items fit on one line */
-    nav ul { 
-        gap: 10px; 
-        width: 100%; 
-        justify-content: center; 
-    }
-    nav ul li a { 
-        font-size: 0.72rem; 
-        white-space: nowrap; 
-    }
-    
-    header h1 { font-size: 2.2rem; }
-    section { padding: 50px 5%; }
-}
+        /* --- MOBILE FIX --- */
+        @media (max-width: 600px) {
+            nav { padding: 10px 3%; flex-direction: column; gap: 8px; }
+            .logo { font-size: 1.1rem; }
+            nav ul { gap: 12px; width: 100%; justify-content: center; }
+            nav ul li a { font-size: 0.72rem; }
+            header h1 { font-size: 2.2rem; }
+            section { padding: 50px 5%; }
+        }
     </style>
 </head>
 <body>
@@ -111,7 +97,7 @@
 
     <header id="home">
         <h1>Abel Brhane <span style="color: var(--primary);">Gebreslasie</span></h1>
-        <p>Computational Mathematician & Cybersecurity Strategist. Ranked #1 in class with a 95.9% average. Dedicated to securing digital systems through advanced analytical logic and ethical hacking.</p>
+        <p>Computational Mathematician & Cybersecurity Strategist. Ranked #1 in class with a 95.9% average. Dedicated to securing digital systems through advanced analytical logic.</p>
         <a href="#expertise" class="cta-btn">View Professional Profile</a>
     </header>
 
@@ -165,8 +151,8 @@
                 </div>
             </a>
             <div class="card">
-                <h3>Security Audit Scripts</h3>
-                <p>Developing Python-based tools for vulnerability assessment, automated technical diagnostics, and network hardening.</p>
+                <h3>Python Security Suite</h3>
+                <p>Developing custom Python scripts for automated system diagnostics, network vulnerability scans, and security auditing.</p>
             </div>
         </div>
     </section>
@@ -184,7 +170,6 @@
     </footer>
 
     <script>
-        // Smooth Reveal Animation
         const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -194,7 +179,6 @@
 
         document.querySelectorAll('section').forEach(section => observer.observe(section));
 
-        // URL Logic for Targeted Applications
         const urlParams = new URLSearchParams(window.location.search);
         const target = urlParams.get('target');
 
