@@ -172,13 +172,13 @@
                 <h3>Hilton Hotel Menu UI</h3>
                 <p>A sophisticated digital menu system featuring real-time search and multi-language support (Amharic/English). Mobile-first design is the industry standard for digital restaurant menus. Because nearly all guests view the menu by scanning a QR code at their table, optimizing the layout exclusively for smartphones ensures an immediate, seamless user experience.</p>
                 
-                <div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; background: rgba(255,255,255,0.03); padding: 12px; border-radius: 8px; border: 1px solid #222;">
-                    <img src="menu-qr.jpg" alt="Menu QR Code" class="qr-thumbnail" id="open-qr-btn">
-                    <p style="font-size: 0.85rem; margin: 0; line-height: 1.3; color: var(--text-dim);">
-                        <strong style="color: var(--accent); display: block; margin-bottom: 2px;">🔍Tap the image to scan and check it out! </strong>
-                       A mobile-first hotel menu UI engineered for instantaneous loading upon scanning a table-side QR code.
-                    </p>
-                </div>
+               <div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; background: rgba(255,255,255,0.03); padding: 12px; border-radius: 8px; border: 1px solid #222;">
+    <img src="menu-qr.jpg" alt="Menu QR Code" class="qr-thumbnail" id="open-qr-btn">
+    <p id="open-qr-text" style="font-size: 0.85rem; margin: 0; line-height: 1.3; color: var(--text-dim); cursor: pointer;">
+        <strong style="color: var(--accent); display: block; margin-bottom: 2px;">🔍Tap the image to scan and check it out! </strong>
+       A mobile-first hotel menu UI engineered for instantaneous loading upon scanning a table-side QR code.
+    </p>
+</div>
                 <div style="margin-top: 15px;">
                     <a href="https://abelbrhanegebreslasie.github.io/Frends/" target="_blank" style="text-decoration: none; color: inherit;">
                         <span style="color: var(--primary); font-size: 0.8rem; font-weight: 600; display: block;">Or click this link text ↗</span>
@@ -232,13 +232,18 @@
 
         // Interactive QR Lightbox Controls
         const openQrBtn = document.getElementById('open-qr-btn');
+        const openQrText = document.getElementById('open-qr-text'); // Added Text Selector
         const qrOverlay = document.getElementById('qr-modal-overlay');
 
         openQrBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             qrOverlay.classList.add('active');
         });
-
+// Trigger Modal with Text Description Click
+openQrText.addEventListener('click', (e) => {
+    e.stopPropagation();
+    qrOverlay.classList.add('active');
+});
         qrOverlay.addEventListener('click', () => {
             qrOverlay.classList.remove('active');
         });
