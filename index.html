@@ -157,13 +157,23 @@
         </div>
     </section>
 
-    <section id="download" style="text-align: center;">
-        <div class="card" style="max-width: 650px; margin: 0 auto; border: 1px solid var(--primary);">
-            <h3 id="cv-title">Academic & Technical CV</h3>
-            <p id="cv-desc" style="margin-bottom: 25px; color: var(--text-dim);">Download my meticulously detailed CV, customized for high-level technical roles and scholarships.</p>
-            <a href="General_CV.pdf" id="cv-link" class="cta-btn" download>Download CV (PDF)</a>
+<section id="download" style="text-align: center;">
+    <div class="card" style="max-width: 650px; margin: 0 auto; border: 1px solid var(--primary);">
+        <h3 id="cv-title">Academic & Technical CV</h3>
+        <p id="cv-desc" style="margin-bottom: 25px; color: var(--text-dim);">Download my meticulously detailed CV, customized for high-level technical roles and scholarships.</p>
+        
+        <a href="General_CV.pdf" id="cv-link" class="cta-btn" download style="margin-bottom: 25px;">Download CV (PDF)</a>
+        
+        <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-top: 20px; border-top: 1px solid #222; padding-top: 20px;">
+            <a href="./" style="color: var(--primary); text-decoration: none; font-size: 0.85rem; font-weight: 600;">General</a>
+            <a href="./?target=insa" style="color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 600;">INSA ↗</a>
+            <a href="./?target=japan" style="color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 600;">MEXT ↗</a>
+            <a href="./?target=saudi" style="color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 600;">Saudi Arabia ↗</a>
+            <a href="./?target=italy" style="color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 600;">Italy ↗</a>
+            <a href="./?target=romania" style="color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 600;">Romania ↗</a>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer>
         &copy; 2026 Abel Brhane Gebreslasie | Applied Mathematics & Cybersecurity Excellence.
@@ -194,6 +204,18 @@
             title.innerText = "MEXT Scholarship Academic CV";
             desc.innerText = "Research-focused CV highlighting #1 class ranking, 90% Chemistry honors, and Mathematics excellence.";
             link.href = "MEXT_Application.pdf";
+        } else if (target === 'saudi') {
+            title.innerText = "Saudi Arabia Scholarship CV";
+            desc.innerText = "Tailored academic profile emphasizing computational mathematics, high national exam metrics, and engineering logic.";
+            link.href = "Saudi_Application.pdf";
+        } else if (target === 'italy') {
+            title.innerText = "Italy University Scholarship CV";
+            desc.innerText = "Academic curriculum structured for European standards (Europass alignment), focusing on STEM development and technical honors.";
+            link.href = "Italy_Application.pdf";
+        } else if (target === 'romania') {
+            title.innerText = "Romania Government Scholarship CV";
+            desc.innerText = "Specialized track profile targeted for MFA and ARICE scholarship systems, highlighting academic excellence and analytical logic.";
+            link.href = "Romania_Application.pdf";
         } else {
             link.href = "General_CV.pdf";
         }
