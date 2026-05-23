@@ -18,3 +18,6 @@ https://abelbrhanegebreslasie.github.io/Profile1/?target=italy
 
 6.Romania
 https://abelbrhanegebreslasie.github.io/Profile1/?target=romania
+
+7.Kazakhstan
+https://abelbrhanegebreslasie.github.io/Profile1/?target=kazakhstan
